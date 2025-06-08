@@ -1,7 +1,35 @@
-body{
-    div{
-        p{
-            color:blue;
+$primary-color:#3498db;
+$secondary-color:#ae2121;
+// $heading-font:'Arial',serif;
+// $gutter:18px;
+
+// body{
+//     p{
+//         color: $primary-color;
+//         font-family: $heading-font;
+//         padding: $gutter;
+//     }
+// }
+
+/*Bu bir yorum satırıdır*/
+nav{
+    ul{
+        list-style:none;
+        margin: 0;
+        padding: 0;
+        li{
+            display: inline-block;
+            margin-right: 20px;
+            a{
+                text-decoration: none;
+                color: $primary-color;
+                &:hover{
+                    color: $secondary-color;
+                }  
+                &.large{
+                    font-size: 20px;
+                }              
+            }
         }
     }
 }
