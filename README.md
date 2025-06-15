@@ -11,3 +11,11 @@
 * Element hiyerarşisi
 * Kapsayıcı seçiciler (&)
 * Yorum satırları
+
+3. Mixins & Functions
+* Mixins
+* * Parametreli mixin tanımlama
+* * @include ile kullanma
+* Functions
+* Basit SCSS fonksiyonu oluşturma
+* Yerleşik (Built-in) Fonksiyonlar
