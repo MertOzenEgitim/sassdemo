@@ -19,3 +19,8 @@
 * Functions
 * Basit SCSS fonksiyonu oluşturma
 * Yerleşik (Built-in) Fonksiyonlar
+
+4. Koşullar ve Döngüler
+* @if, @else if, @else kullanımı
+* Map ve List yapıları
+* @for, @each, @while döngüleri

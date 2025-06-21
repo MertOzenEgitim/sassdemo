@@ -1,51 +1,72 @@
-@use "sass:math";
+// $theme:dark;
 
-$primary-color:#007bff;
+// body{
+//     @if $theme==light{
+//         background-color: $fff;
+//         color:#000;
+//     }@else if $theme==dark{
+//         background-color: #000;
+//         color: #fff;
+//     }@else{
+//         background-color: gray;
+//         color: black;
+//     }
+// }
+// $spacing:0,5px,10px,15px;
+// $spacing-2:nth($spacing,2);
 
-@mixin button-style($bg-color,$text-color){
-    background-color: $bg-color;
-    color:$text-color;
-    padding: 10px 20px;
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
-}
+// p{
+//     padding: $spacing-2;
+// }
 
-@mixin clearfix{
-    &::after{
-        content: "";
-        display: table;
-        clear: both;
+// $breakpoints:(
+//     "sm":576px,
+//     "md":768px,
+//     "lg":992px
+// );
+
+// $md-size:map-get($breakpoints,"md");
+
+// div{
+//     width: $md-size;
+// }
+
+// @for $i from 1 through 5{
+//     .mt-#{$i}{
+//         margin-top: #{$i*10}px;
+//     }
+// }
+// @for $i from 1 to 5{
+//     .mt-#{$i}{
+//         margin-top: #{$i*10}px;
+//     }
+// }
+
+// $colors:red,green,blue;
+
+// @each $color in $colors{
+//     .text-#{$color}{
+//         color:$color;
+//     }
+// }
+
+// $theme-colors:(
+//     "primary":#007bff,
+//     "secondary":#6c757d,
+//     "success":#28a745
+// );
+
+// @each $name,$hex in $theme-colors{
+//     .bg-#{$name}{
+//         background-color: $hex;
+//     }
+// }
+
+$i:1;
+
+@while $i<=3{
+    .w-#{$i}00{
+        width: #{$i*100}px;
     }
-}
-
-@function px-to-rem($px,$base:16){
-    @return math.div($px,$base)*1rem;
-}
-
-@function spacing($multiplier){
-    @return $multiplier*8px;
-}
-@mixin card($bg-color)
-{
-    background-color: $bg-color;
-    padding: spacing(2);
-    margin: spacing(0.5);
-}
-
-.button-primary{
-    @include button-style(#007bff, #fff);
-}
-
-.button-danger{
-    @include button-style(#dc3545, #fff);
-}
-
-.container{
-    @include clearfix;
-    font-size: px-to-rem(18);
-}
-
-.card{
-    @include card($primary-color);
+    $i:$i+1;
 }
