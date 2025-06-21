@@ -1,35 +1,51 @@
-$primary-color:#3498db;
-$secondary-color:#ae2121;
-// $heading-font:'Arial',serif;
-// $gutter:18px;
+@use "sass:math";
 
-// body{
-//     p{
-//         color: $primary-color;
-//         font-family: $heading-font;
-//         padding: $gutter;
-//     }
-// }
+$primary-color:#007bff;
 
-/*Bu bir yorum satırıdır*/
-nav{
-    ul{
-        list-style:none;
-        margin: 0;
-        padding: 0;
-        li{
-            display: inline-block;
-            margin-right: 20px;
-            a{
-                text-decoration: none;
-                color: $primary-color;
-                &:hover{
-                    color: $secondary-color;
-                }  
-                &.large{
-                    font-size: 20px;
-                }              
-            }
-        }
+@mixin button-style($bg-color,$text-color){
+    background-color: $bg-color;
+    color:$text-color;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+@mixin clearfix{
+    &::after{
+        content: "";
+        display: table;
+        clear: both;
     }
+}
+
+@function px-to-rem($px,$base:16){
+    @return math.div($px,$base)*1rem;
+}
+
+@function spacing($multiplier){
+    @return $multiplier*8px;
+}
+@mixin card($bg-color)
+{
+    background-color: $bg-color;
+    padding: spacing(2);
+    margin: spacing(0.5);
+}
+
+.button-primary{
+    @include button-style(#007bff, #fff);
+}
+
+.button-danger{
+    @include button-style(#dc3545, #fff);
+}
+
+.container{
+    @include clearfix;
+    font-size: px-to-rem(18);
+}
+
+.card{
+    @include card($primary-color);
 }
