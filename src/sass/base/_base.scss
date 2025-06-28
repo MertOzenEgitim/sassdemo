@@ -1,0 +1,13 @@
+@use '../abstracts' as *;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-stack;
+  color: $secondary-color;
+  background-color: #f8f9fa;
+}

@@ -1,0 +1,24 @@
+@use '../abstracts' as *;
+
+.card {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: spacing(2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+
+  display: flex;
+  flex-direction: column;
+  gap: spacing(1);
+
+  .card-header {
+    @include flex-center;
+    font-weight: bold;
+    @include responsive-font(16, 24);
+  }
+
+  .card-body {
+    color: $secondary-color;
+    font-size: rem(14);
+  }
+}

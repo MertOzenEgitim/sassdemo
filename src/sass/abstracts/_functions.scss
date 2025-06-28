@@ -1,0 +1,18 @@
+@use 'variables' as *;
+@use 'sass:math';
+
+@function spacing($multiplier) {
+  @return $multiplier * $spacing-unit;
+}
+
+@function rem($px, $base: 16) {
+  @return math.div($px, $base) * 1rem;
+}
+
+@function transparent($color, $alpha) {
+  @return rgba($color, $alpha);
+}
+
+@function clamp-size($min, $preferred, $max) {
+  @return clamp(#{$min}, #{$preferred}, #{$max});
+}
