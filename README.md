@@ -24,3 +24,8 @@
 * @if, @else if, @else kullanımı
 * Map ve List yapıları
 * @for, @each, @while döngüleri
+
+5. Modüler SCSS Yapısı
+* @import ile parçalara ayırma (klasik yöntem)
+* @use ve @forward (modern yöntem) 
+* Modern SCSS Modüler Yapı Önerisi
