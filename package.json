@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-   "scripts": {
+  "scripts": {
     "dev:js": "gulp",
     "dev:mjs": "gulp --gulpfile gulpfile.mjs",
     "build:js": "gulp build",
@@ -17,6 +17,7 @@
     "@babel/preset-env": "^7.24.1",
     "babel-loader": "^9.1.3",
     "browser-sync": "^3.0.4",
+    "del": "^8.0.0",
     "gulp": "^5.0.0",
     "gulp-concat": "^2.6.1",
     "gulp-htmlmin": "^5.0.1",

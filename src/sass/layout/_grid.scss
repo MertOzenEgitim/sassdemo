@@ -1,27 +1,5 @@
-@use '../abstracts' as *;
-
 .container {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: spacing(2);
-
-  @include respond-to('sm') {
-    padding: spacing(1);
-  }
-}
-
-.row {
   display: flex;
-  flex-wrap: wrap;
-  margin: 0 -spacing(1);
-
-  @include respond-to('sm') {
-    flex-direction: column;
-  }
-}
-
-.col {
-  flex: 1;
-  padding: spacing(1);
+  flex-direction: column;
+  align-items: center;
 }

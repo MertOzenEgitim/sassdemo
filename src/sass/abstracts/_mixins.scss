@@ -2,27 +2,10 @@
 
 @mixin flex-center {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 }
 
 @mixin responsive-font($min, $max) {
-  font-size: clamp-size(rem($min), 2vw, rem($max));
-}
-
-@mixin respond-to($breakpoint) {
-  @if $breakpoint == 'sm' {
-    @media (max-width: 576px) { @content; }
-  } @else if $breakpoint == 'md' {
-    @media (max-width: 768px) { @content; }
-  } @else if $breakpoint == 'lg' {
-    @media (max-width: 992px) { @content; }
-  } @else if $breakpoint == 'xl' {
-    @media (max-width: 1200px) { @content; }
-  }
-}
-
-@mixin square($size) {
-  width: $size;
-  height: $size;
+  font-size: clamp(rem($min), 2vw, rem($max));
 }
