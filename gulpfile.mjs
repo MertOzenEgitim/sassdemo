@@ -8,6 +8,7 @@ import webpack from 'webpack-stream';
 import webpackLib from 'webpack';
 import htmlmin from 'gulp-htmlmin';
 import browserSyncLib from 'browser-sync';
+import { deleteSync } from 'del';
 
 const sass = gulpSass(dartSass);
 const browserSync = browserSyncLib.create();
@@ -60,6 +61,11 @@ export const optimizeImages = () =>
     .pipe(gulp.dest('dist/images'))
     .pipe(browserSync.stream());
 
+export const clean = async () => {
+  const { deleteSync } = await import('del');
+  deleteSync(['dist']);
+};
+
 // Watch & Serve
 export const serve = () => {
   browserSync.init({ server: { baseDir: './dist' } });
@@ -69,5 +75,8 @@ export const serve = () => {
   gulp.watch('./src/index.html', processHTML);
 };
 
-export const build = gulp.parallel(processHTML, compileSass, processJS, optimizeImages, bundle);
+export const build = gulp.series(
+  clean,
+  gulp.parallel(processHTML, compileSass, processJS, optimizeImages, bundle)
+);
 export default gulp.series(build, serve);

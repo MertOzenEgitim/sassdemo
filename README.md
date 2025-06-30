@@ -29,3 +29,8 @@
 * @import ile parçalara ayırma (klasik yöntem)
 * @use ve @forward (modern yöntem) 
 * Modern SCSS Modüler Yapı Önerisi
+
+6.(7-1) Pattern
+* 7-1 Pattern Nedir?
+* Her Klasör Ne İşe Yarar?
+* Uygulama
