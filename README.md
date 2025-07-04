@@ -30,7 +30,18 @@
 * @use ve @forward (modern yöntem) 
 * Modern SCSS Modüler Yapı Önerisi
 
-6.(7-1) Pattern
+6. (7-1) Pattern
 * 7-1 Pattern Nedir?
 * Her Klasör Ne İşe Yarar?
 * Uygulama
+
+7. Bootstrap'i İnceleyelim
+* Bootstrap’in SASS Dosya Yapısı
+* * variables.scss (tema renkleri, boyutlar)
+* * mixins.scss (yararlı mixinler)
+* * functions.scss (renk hesaplama, dönüşümler)
+* * components (buttons, cards, modal vs.)
+* * utilities (yardımcı sınıflar)
+* * main dosya: bootstrap.scss
+* Bootstrap Grid’i Oluşturalım
+
